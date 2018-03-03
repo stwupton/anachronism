@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var coffee_area = $Coffee/Area2D #get_node('Coffee/Area2D')
+onready var coffee_area = $Coffee/CoffeeToTakeArea #get_node('Coffee/Area2D')
 onready var coffee = $Coffee
 
 func _ready():
@@ -8,4 +8,4 @@ func _ready():
 	
 func _on_area_entered(area):
 	if area.name == 'CoffeeStealer':
-		coffee.visible = false
+		coffee.queue_free()

@@ -27,7 +27,7 @@ z_index = 1
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Area2D" type="Area2D" parent="Coffee" index="0"]
+[node name="CoffeeToTakeArea" type="Area2D" parent="Coffee" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -37,7 +37,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Coffee/Area2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coffee/CoffeeToTakeArea" index="0"]
 
 position = Vector2( -49.2715, 50.5898 )
 scale = Vector2( 2.02963, 1.62246 )
