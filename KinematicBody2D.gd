@@ -1,14 +1,21 @@
 extends KinematicBody2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+
 
 func _ready():
-	print("Hello world")
+	set_physics_process(true)
+	print("This is the brain - reading loud and clear..!")
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _physics_process(delta):
+	if Input.is_action_pressed("ui_left"):
+		move_and_slide(Vector2(-50, 0))
+	if Input.is_action_pressed("ui_right"):
+		move_and_slide(Vector2(50, 0))
+	if Input.is_action_pressed("ui_up"):
+		move_and_slide(Vector2(0, -50))
+	if Input.is_action_pressed("ui_down"):
+		move_and_slide(Vector2(0, 50))
+
+# If left is pressed 
+#   move and slide character left 
 
