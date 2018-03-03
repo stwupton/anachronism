@@ -1,16 +1,21 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scn/PoliceCar.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 100, 200 )
 
-[node name="PoliceCar" type="KinematicBody2D" index="0"]
+[node name="PoliceCar" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
+script = ExtResource( 1 )
+navigation_path = null
+target_path = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
@@ -33,6 +38,9 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 1, 1, 1, 1 )
-_sections_unfolded = [ "Rect" ]
+
+[node name="Draw" type="Node2D" parent="." index="2"]
+
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 
