@@ -76,6 +76,18 @@ editor/display_folded = true
 navpoly = SubResource( 1 )
 enabled = true
 
+[node name="Node2D" parent="Navigation2D" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( -77.0048, 182.75 )
+
+[node name="Node2D2" parent="Navigation2D" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 792.274, 585.421 )
+
+[node name="Node2D3" parent="Navigation2D" index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 790.914, 273.895 )
+
 [node name="PoliceCar" parent="." index="14" instance=ExtResource( 4 )]
 
 position = Vector2( -1133.95, 399.856 )
