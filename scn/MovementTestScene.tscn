@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scn/PlayerCharacter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scn/BoxCollisionTest.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scn/coffee.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scn/PoliceCar.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scn/DebugNavLine.tscn" type="PackedScene" id=5]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -76,18 +77,6 @@ editor/display_folded = true
 navpoly = SubResource( 1 )
 enabled = true
 
-[node name="Node2D" parent="Navigation2D" index="1" instance=ExtResource( 3 )]
-
-position = Vector2( -77.0048, 182.75 )
-
-[node name="Node2D2" parent="Navigation2D" index="2" instance=ExtResource( 3 )]
-
-position = Vector2( 792.274, 585.421 )
-
-[node name="Node2D3" parent="Navigation2D" index="3" instance=ExtResource( 3 )]
-
-position = Vector2( 790.914, 273.895 )
-
 [node name="PoliceCar" parent="." index="14" instance=ExtResource( 4 )]
 
 position = Vector2( -1133.95, 399.856 )
@@ -95,5 +84,9 @@ scale = Vector2( 0.3, 0.3 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 navigation_path = NodePath("../Navigation2D")
 target_path = NodePath("../KinematicBody2D")
+
+[node name="DebugNavLine" parent="." index="15" instance=ExtResource( 5 )]
+
+police_paths = [ NodePath("../PoliceCar") ]
 
 
