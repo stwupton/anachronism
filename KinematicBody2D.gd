@@ -1,21 +1,20 @@
 extends KinematicBody2D
 
-
+var movementVariable = Vector2(0,0)
 
 func _ready():
 	set_physics_process(true)
 	print("This is the brain - reading loud and clear..!")
 
 func _physics_process(delta):
+	movementVariable = Vector2(0,0)
 	if Input.is_action_pressed("ui_left"):
-		move_and_slide(Vector2(-50, 0))
+		movementVariable.x-=1
 	if Input.is_action_pressed("ui_right"):
-		move_and_slide(Vector2(50, 0))
+		movementVariable.x+=1
 	if Input.is_action_pressed("ui_up"):
-		move_and_slide(Vector2(0, -50))
+		movementVariable.y-=1
 	if Input.is_action_pressed("ui_down"):
-		move_and_slide(Vector2(0, 50))
-
-# If left is pressed 
-#   move and slide character left 
-
+		movementVariable.y+=1
+	movementVariable.normalized()
+	move_and_slide(movementVariable*50)
