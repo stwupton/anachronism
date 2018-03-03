@@ -17,4 +17,4 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_down"):
 		movementVariable.y+=1
 	movementVariable.normalized()
-	move_and_slide(movementVariable*250)
+	move_and_slide(movementVariable*350)

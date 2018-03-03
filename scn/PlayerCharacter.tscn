@@ -3,10 +3,10 @@
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+radius = 10.0
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 
@@ -20,7 +20,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
@@ -39,19 +39,19 @@ limit_top = -10000000
 limit_right = 10000000
 limit_bottom = 10000000
 limit_smoothed = false
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
 smoothing_enabled = true
-smoothing_speed = 5.0
+smoothing_speed = 15.0
 offset_v = 0.0
 offset_h = 0.0
-drag_margin_left = 0.1
+drag_margin_left = 0.13
 drag_margin_top = 0.1
-drag_margin_right = 0.1
-drag_margin_bottom = 0.1
+drag_margin_right = 0.13
+drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
-editor_draw_drag_margin = false
-_sections_unfolded = [ "Drag Margin", "Limit", "Smoothing" ]
+editor_draw_drag_margin = true
+_sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Smoothing" ]
 
 
