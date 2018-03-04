@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal wasted_player
+
 export(NodePath) var navigation_path
 export(NodePath) var target_path
 
@@ -53,6 +55,13 @@ func _physics_process(delta):
 	_motion.x = clamp(_motion.x, -_max_speed, _max_speed)
 	_motion.y = clamp(_motion.y, -_max_speed, _max_speed)
 	
+	# Store motion to check how fast the car hits the player
+	var hit_motion = _motion
+	
 	_motion = move_and_slide(_motion)
+	
+	for i in range(get_slide_count()):
+		if get_slide_collision(i).collider.name == 'Player' && hit_motion.length() >= _max_speed / 2:
+			emit_signal("wasted_player")
 	
 	

@@ -20,21 +20,19 @@ func _physics_process(delta): #Gets checked every physics check
 	#Movement via keys 
 	movementVariable = Vector2(0,0)
 	if Input.is_action_pressed("ui_left"):
-		movementVariable.x-=1
+		movementVariable.x -= 1
 	if Input.is_action_pressed("ui_right"):
-		movementVariable.x+=1
+		movementVariable.x += 1
 	if Input.is_action_pressed("ui_up"):
-		movementVariable.y-=1
+		movementVariable.y -= 1
 	if Input.is_action_pressed("ui_down"):
-		movementVariable.y+=1
+		movementVariable.y += 1
 	movementVariable = movementVariable.normalized()
-	move_and_slide(movementVariable*500)
+	move_and_slide(movementVariable * 500)
 
 func _on_area_entered(area):
 	if area.name == "CoffeeToTakeArea":
 		emit_signal("coffee_collected")
-
-
 		
 #If (our character) touches (someone (who has a coffee))
 	#Remove the coffee from the person

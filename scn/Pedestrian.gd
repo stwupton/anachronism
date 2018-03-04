@@ -23,6 +23,8 @@ func _set_has_coffee(x):
 		coffee.visible = has_coffee
 	
 		if has_coffee:
+			coffee_area.monitorable = true
 			coffee_area.connect('area_entered', self, '_on_area_entered')
 		else:
+			coffee_area.monitorable = false
 			coffee_area.disconnect('area_entered', self, '_on_area_entered')

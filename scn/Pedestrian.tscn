@@ -39,22 +39,21 @@ tracks/1/keys = {
 "values": [ -11.0816, 14.2373 ]
 }
 
-[node name="Pedestrian" type="Node2D" index="0"]
+[node name="Pedestrian" type="Node2D"]
 
 script = ExtResource( 1 )
 has_coffee = true
 
 [node name="Person" type="Sprite" parent="." index="0"]
 
-position = Vector2( 3.84699, -31.9652 )
-rotation = 0.0513482
+position = Vector2( 3.36824, -31.9652 )
+rotation = 0.0428854
 scale = Vector2( 1, 1.99892 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Coffee" type="Sprite" parent="." index="1"]
 
-editor/display_folded = true
 position = Vector2( 31.6493, -28.8439 )
 rotation = 0.13002
 scale = Vector2( 0.4927, 0.616348 )
@@ -71,6 +70,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coffee/CoffeeToTakeArea" index="0"]
 
