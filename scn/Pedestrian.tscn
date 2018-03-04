@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scn/Pedestrian.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
@@ -8,6 +8,37 @@
 custom_solver_bias = 0.0
 radius = 45.3826
 
+[sub_resource type="Animation" id=2]
+
+resource_name = "Shuffle"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Person:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -9.99998, -31.9653 ), Vector2( 15, -31.9652 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Person:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -11.0816, 14.2373 ]
+}
+
 [node name="Pedestrian" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
@@ -15,14 +46,17 @@ has_coffee = true
 
 [node name="Person" type="Sprite" parent="." index="0"]
 
-position = Vector2( 0, -31.9653 )
+position = Vector2( 3.84699, -31.9652 )
+rotation = 0.0513482
 scale = Vector2( 1, 1.99892 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Coffee" type="Sprite" parent="." index="1"]
 
-position = Vector2( 23.5591, -31.8979 )
+editor/display_folded = true
+position = Vector2( 31.6493, -28.8439 )
+rotation = 0.13002
 scale = Vector2( 0.4927, 0.616348 )
 z_index = 1
 texture = ExtResource( 2 )
@@ -43,5 +77,16 @@ audio_bus_name = "Master"
 position = Vector2( -49.2715, 50.5898 )
 scale = Vector2( 2.02963, 1.62246 )
 shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Shuffle = SubResource( 2 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
 
 

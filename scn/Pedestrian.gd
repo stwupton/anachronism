@@ -5,9 +5,11 @@ export(bool) var has_coffee = false setget _set_has_coffee
 
 onready var coffee_area = $Coffee/CoffeeToTakeArea #get_node('Coffee/Area2D')
 onready var coffee = $Coffee
+onready var animation_player = $AnimationPlayer
 
 func _ready():
 	_set_has_coffee(has_coffee)
+	animation_player.play('Shuffle')
 	
 func _on_area_entered(area):
 	if area.name == 'CoffeeStealer':
