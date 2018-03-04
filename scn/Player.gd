@@ -25,8 +25,8 @@ func _physics_process(delta): #Gets checked every physics check
 		movementVariable.y-=1
 	if Input.is_action_pressed("ui_down"):
 		movementVariable.y+=1
-	movementVariable.normalized()
-	move_and_slide(movementVariable*350)
+	movementVariable = movementVariable.normalized()
+	move_and_slide(movementVariable*500)
 
 func _on_area_entered(area):
 	if area.name == "CoffeeToTakeArea":

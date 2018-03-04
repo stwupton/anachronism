@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://scn/Player.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -13,7 +13,7 @@ radius = 43.1379
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1

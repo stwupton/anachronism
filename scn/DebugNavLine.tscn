@@ -2,9 +2,9 @@
 
 [ext_resource path="res://scn/DebugNavLine.gd" type="Script" id=1]
 
-[node name="DebugNavLine" type="Node2D" index="0"]
+[node name="DebugNavLine" type="Node2D"]
 
 script = ExtResource( 1 )
-police = null
+police_paths = null
 
 
