@@ -58,7 +58,7 @@ extents = Vector2( 45.8133, 257.296 )
 custom_solver_bias = 0.0
 extents = Vector2( 34.3385, 241.951 )
 
-[node name="Level" type="Node2D" index="0"]
+[node name="Level" type="Node2D"]
 
 __meta__ = {
 "_edit_lock_": true

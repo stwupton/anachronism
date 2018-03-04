@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal coffee_collected
+
 onready var handsArea = $CoffeeStealer
 onready var hands = $CoffeeStealer/InteractionTrigger
 
@@ -30,8 +32,8 @@ func _physics_process(delta): #Gets checked every physics check
 
 func _on_area_entered(area):
 	if area.name == "CoffeeToTakeArea":
-		coffeesCollected = coffeesCollected +1 
-		print(coffeesCollected)
+		emit_signal("coffee_collected")
+
 
 		
 #If (our character) touches (someone (who has a coffee))

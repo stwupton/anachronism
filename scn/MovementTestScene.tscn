@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scn/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scn/BoxCollisionTest.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scn/Pedestrian.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scn/PoliceCar.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scn/DebugNavLine.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scn/GameLogic.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scn/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scn/BoxCollisionTest.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scn/Pedestrian.tscn" type="PackedScene" id=4]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -12,79 +11,113 @@ vertices = PoolVector2Array( 787.646, 252.948, 950.232, 36.6453, 950.232, 590.68
 polygons = [ PoolIntArray( 0, 1, 2 ), PoolIntArray( 3, 4, 5, 6, 7 ), PoolIntArray( 8, 9, 10, 2, 11, 12, 13 ), PoolIntArray( 14, 8, 13, 15 ), PoolIntArray( 16, 17, 18, 7, 19 ), PoolIntArray( 20, 1, 0, 21 ), PoolIntArray( 22, 20, 21, 23, 24, 25 ), PoolIntArray( 26, 0, 2 ), PoolIntArray( 27, 26, 2, 10 ), PoolIntArray( 28, 26, 27, 24 ), PoolIntArray( 23, 28, 24 ), PoolIntArray( 29, 30, 25, 31, 17 ), PoolIntArray( 17, 16, 32 ), PoolIntArray( 33, 3, 7, 18 ), PoolIntArray( 5, 4, 14, 15, 34 ), PoolIntArray( 35, 19, 7, 36 ), PoolIntArray( 31, 9, 8, 37 ), PoolIntArray( 30, 22, 25 ), PoolIntArray( 38, 30, 29, 39 ), PoolIntArray( 40, 39, 29, 41 ), PoolIntArray( 42, 40, 41, 43 ), PoolIntArray( 44, 42, 43, 45, 46 ), PoolIntArray( 47, 46, 45, 29, 36 ), PoolIntArray( 34, 12, 11 ), PoolIntArray( 34, 11, 5 ), PoolIntArray( 6, 5, 48, 49 ), PoolIntArray( 49, 48, 46, 47 ), PoolIntArray( 35, 36, 29 ), PoolIntArray( 32, 35, 29 ), PoolIntArray( 17, 32, 29 ), PoolIntArray( 17, 31, 37 ) ]
 outlines = [ PoolVector2Array( -121.828, 135.433, -339.947, 74.0874, -680.758, 130.889, -1020.87, 128.47, -1250.74, 146.694, -1281.1, 583.093, -962.334, 981.544, -757.417, 1061.23, -290.659, 947.391, 733.93, 1015.7, 950.232, 590.683, 950.232, 36.6453, 521.423, -156.888, 47.0759, 78.3878 ), PoolVector2Array( -1090.77, 283.306, -995.898, 207.41, -1086.97, 161.873, -1178.05, 188.436 ), PoolVector2Array( -946.566, 746.268, -753.033, 693.141, -696.111, 814.574, -825.133, 909.444, -946.566, 867.701 ), PoolVector2Array( -688.521, 526.171, -635.395, 473.045, -711.29, 397.149, -775.801, 438.891 ), PoolVector2Array( -271.096, 438.891, -180.021, 526.171, -240.738, 727.295, -180.021, 841.138, -92.7417, 772.832, -1.66699, 507.198, -161.048, 317.459, -343.197, 287.1 ), PoolVector2Array( 286.736, 473.045, 390.116, 464.359, 453.706, 412.328, 355.042, 211.205, 176.687, 177.052, 184.277, 302.28 ), PoolVector2Array( 150.124, 772.832, 263.967, 871.496, 142.534, 936.007, 59.0493, 867.701 ), PoolVector2Array( 685.187, 306.074, 787.646, 252.948, 696.572, 150.489, 594.113, 169.462, 601.702, 264.332 ) ]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 0, -1 )
 
-[node name="KinematicBody2D" parent="." index="0" instance=ExtResource( 1 )]
+[node name="GameLogicNode" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 515.644, 319.725 )
+position = Vector2( -174.48, 59.8514 )
 
-[node name="Node2D" parent="." index="1" instance=ExtResource( 2 )]
+[node name="Player" parent="GameLogicNode" index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 265.997, 226.935 )
+position = Vector2( 690.124, 259.874 )
 
-[node name="Node2D2" parent="." index="2" instance=ExtResource( 2 )]
+[node name="Node2D" parent="GameLogicNode" index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 704.3, 187.647 )
+position = Vector2( 440.477, 167.084 )
 
-[node name="Node2D3" parent="." index="3" instance=ExtResource( 2 )]
+[node name="Node2D2" parent="GameLogicNode" index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 377.722, 380.402 )
+position = Vector2( 878.78, 127.796 )
 
-[node name="Node2D4" parent="." index="4" instance=ExtResource( 2 )]
+[node name="Node2D3" parent="GameLogicNode" index="3" instance=ExtResource( 3 )]
 
-position = Vector2( -98.3649, 481.414 )
+position = Vector2( 552.202, 320.551 )
 
-[node name="Node2D5" parent="." index="5" instance=ExtResource( 2 )]
+[node name="Node2D4" parent="GameLogicNode" index="4" instance=ExtResource( 3 )]
 
-position = Vector2( -155.931, 700.679 )
+position = Vector2( 76.1149, 421.563 )
 
-[node name="Node2D6" parent="." index="6" instance=ExtResource( 2 )]
+[node name="Node2D5" parent="GameLogicNode" index="5" instance=ExtResource( 3 )]
 
-position = Vector2( -214.656, 326.056 )
+position = Vector2( 18.5488, 640.828 )
 
-[node name="Node2D7" parent="." index="7" instance=ExtResource( 2 )]
+[node name="Node2D6" parent="GameLogicNode" index="6" instance=ExtResource( 3 )]
 
-position = Vector2( 172.047, 824.779 )
+position = Vector2( -40.1762, 266.205 )
 
-[node name="Node2D8" parent="." index="8" instance=ExtResource( 2 )]
+[node name="Node2D7" parent="GameLogicNode" index="7" instance=ExtResource( 3 )]
 
-position = Vector2( -688.895, 423.671 )
+position = Vector2( 346.527, 764.928 )
 
-[node name="Node2D9" parent="." index="9" instance=ExtResource( 2 )]
+[node name="Node2D8" parent="GameLogicNode" index="8" instance=ExtResource( 3 )]
 
-position = Vector2( -1078.92, 167.715 )
+position = Vector2( -514.415, 363.82 )
 
-[node name="Node2D10" parent="." index="10" instance=ExtResource( 2 )]
+[node name="Node2D9" parent="GameLogicNode" index="9" instance=ExtResource( 3 )]
 
-position = Vector2( -859.532, 752.756 )
+position = Vector2( -904.44, 107.864 )
 
-[node name="Node2D11" parent="." index="11" instance=ExtResource( 2 )]
+[node name="Node2D10" parent="GameLogicNode" index="10" instance=ExtResource( 3 )]
 
-position = Vector2( -795.266, 753.865 )
+position = Vector2( -685.052, 692.905 )
 
-[node name="Node2D12" parent="." index="12" instance=ExtResource( 3 )]
+[node name="Node2D11" parent="GameLogicNode" index="11" instance=ExtResource( 3 )]
 
-position = Vector2( 112.41, 401.834 )
+position = Vector2( -620.786, 694.014 )
 
-[node name="Navigation2D" type="Navigation2D" parent="." index="13"]
+[node name="Node2D12" parent="GameLogicNode" index="12" instance=ExtResource( 4 )]
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
+position = Vector2( 286.89, 341.983 )
+
+[node name="Navigation2D" type="Navigation2D" parent="GameLogicNode" index="13"]
+
+position = Vector2( 174.48, -59.8514 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="GameLogicNode/Navigation2D" index="0"]
 
 navpoly = SubResource( 1 )
 enabled = true
 
-[node name="PoliceCar" parent="." index="14" instance=ExtResource( 4 )]
+[node name="Pedestrian" parent="." index="1" instance=ExtResource( 4 )]
 
-position = Vector2( -1133.95, 399.856 )
-scale = Vector2( 0.3, 0.3 )
-_sections_unfolded = [ "Transform", "Visibility" ]
-navigation_path = NodePath("../Navigation2D")
-target_path = NodePath("../KinematicBody2D")
+position = Vector2( -367.589, 568.131 )
 
-[node name="DebugNavLine" parent="." index="15" instance=ExtResource( 5 )]
+[node name="Pedestrian2" parent="." index="2" instance=ExtResource( 4 )]
 
-police_paths = [ NodePath("../PoliceCar") ]
+position = Vector2( -541.547, 618.097 )
+
+[node name="Pedestrian3" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( -900.567, 495.957 )
+
+[node name="Pedestrian4" parent="." index="4" instance=ExtResource( 4 )]
+
+position = Vector2( -832.094, 186.903 )
+
+[node name="Pedestrian5" parent="." index="5" instance=ExtResource( 4 )]
+
+position = Vector2( -571.157, 196.156 )
+
+[node name="Pedestrian6" parent="." index="6" instance=ExtResource( 4 )]
+
+position = Vector2( -312.07, 286.837 )
+
+[node name="Pedestrian7" parent="." index="7" instance=ExtResource( 4 )]
+
+position = Vector2( -672.941, 895.69 )
+
+[node name="Pedestrian8" parent="." index="8" instance=ExtResource( 4 )]
+
+position = Vector2( -10.4196, 930.852 )
+
+[node name="Pedestrian9" parent="." index="9" instance=ExtResource( 4 )]
+
+position = Vector2( 169.09, 90.6712 )
+
+[node name="Pedestrian10" parent="." index="10" instance=ExtResource( 4 )]
+
+position = Vector2( 326.393, 623.649 )
 
 
