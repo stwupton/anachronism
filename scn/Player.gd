@@ -13,7 +13,7 @@ var coffeesCollected = 0
 
 func _ready(): #As soon as the object is put into the game... run this:
 	set_physics_process(true) #Look out for _physics_process(delta)
-	print("This is the brain - reading loud and clear..!")
+	print("This is the player brain - reading loud and clear..!")
 	handsArea.connect("area_entered", self, "_on_area_entered") #prepares to take coffees
 
 func _physics_process(delta): #Gets checked every physics check 
