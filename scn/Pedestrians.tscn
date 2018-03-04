@@ -10,18 +10,18 @@ _data = {
 "points": PoolVector2Array( 0, 0, -18.325, 28.8915, 416.821, 442.264, -16.2164, -51.0547, 33.5512, 32.5694, 422.791, 1109, -26.2817, 24.6471, 26.2817, -74.3814, 599.261, 1107.01, 30.8575, 16.2982, -47.0824, -18.7534, 590.637, 438.947, 28.0888, -33.1048, 0, 0, 418.811, 441.601 )
 }
 
-[node name="Pedestrians" type="Path2D"]
+[node name="Pedestrians" type="Path2D" index="0"]
 
-position = Vector2( 1.20132, 0 )
 curve = SubResource( 1 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 follow_path = null
+pedestrian_rotation = 0
 
 [node name="PathFollow2D" type="PathFollow2D" parent="." index="0"]
 
-position = Vector2( 416.821, 442.264 )
-offset = 0.0
+position = Vector2( 407.663, 823.369 )
+offset = 111085.0
 h_offset = 0.0
 v_offset = 0.0
 rotate = false
@@ -36,8 +36,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="PathFollow2D2" type="PathFollow2D" parent="." index="1"]
 
-position = Vector2( 419.44, 1090.2 )
-offset = 649.16
+position = Vector2( 614.9, 930.308 )
+offset = 111734.0
 h_offset = 0.0
 v_offset = 0.0
 rotate = false
@@ -52,8 +52,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="PathFollow2D3" type="PathFollow2D" parent="." index="2"]
 
-position = Vector2( 615.994, 722.015 )
-offset = 1238.44
+position = Vector2( 496.738, 420.8 )
+offset = 112323.0
 h_offset = 0.0
 v_offset = 0.0
 rotate = false

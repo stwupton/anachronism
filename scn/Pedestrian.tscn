@@ -79,8 +79,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Person" type="AnimatedSprite" parent="." index="1"]
 
-position = Vector2( -8.50574, -31.9653 )
-rotation = -0.166998
+position = Vector2( -0.851322, -31.9653 )
+rotation = -0.0316993
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 3 )
 animation = "coffee"

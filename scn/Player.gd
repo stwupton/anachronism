@@ -5,6 +5,7 @@ signal coffee_collected
 onready var handsArea = $CoffeeStealer
 onready var hands = $CoffeeStealer/InteractionTrigger
 onready var sprite = $Sprite
+onready var gui = $Camera2D/GUI
 
 #Variables declared to make the game work... 
 #It just works... (tm)
@@ -48,6 +49,7 @@ func _physics_process(delta): #Gets checked every physics check
 func _on_area_entered(area):
 	if area.name == "CoffeeToTakeArea":
 		emit_signal("coffee_collected")
+		gui.increment_score()
 		
 #If (our character) touches (someone (who has a coffee))
 	#Remove the coffee from the person

@@ -7,7 +7,7 @@
 flags = 4
 load_path = "res://.import/police_car.png-4307555ccb6d7cc071dac030bfa5bccf.stex"
 
-[node name="PoliceCar" type="KinematicBody2D" index="0"]
+[node name="PoliceCar" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1

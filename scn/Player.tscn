@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scn/Player.gd" type="Script" id=1]
 [ext_resource path="res://Asset/down_1.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Asset/up_1.png" type="Texture" id=6]
 [ext_resource path="res://Asset/up_2.png" type="Texture" id=7]
 [ext_resource path="res://Asset/idle.png" type="Texture" id=8]
+[ext_resource path="res://scn/GUI.tscn" type="PackedScene" id=9]
 
 [sub_resource type="SpriteFrames" id=3]
 
@@ -105,5 +106,12 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing" ]
+
+[node name="GUI" parent="Camera2D" index="0" instance=ExtResource( 9 )]
+
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
 
 
