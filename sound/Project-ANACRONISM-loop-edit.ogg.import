@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Project-ANACRONISM-loop-edit.ogg-b7927b86a3b96b7731f68bcf55e40c70.oggstr"
+
+[deps]
+
+source_file="res://sound/Project-ANACRONISM-loop-edit.ogg"
+source_md5="027e51315163a84b2be7785c5cd24779"
+
+dest_files=[ "res://.import/Project-ANACRONISM-loop-edit.ogg-b7927b86a3b96b7731f68bcf55e40c70.oggstr" ]
+dest_md5="2e4741384533210a0f5177f3d49470d0"
+
+[params]
+
+loop=true
+loop_offset=0
