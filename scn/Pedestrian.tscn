@@ -8,9 +8,10 @@
 custom_solver_bias = 0.0
 radius = 45.3826
 
-[node name="Pedestrian" type="Node2D"]
+[node name="Pedestrian" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
+has_coffee = true
 
 [node name="Person" type="Sprite" parent="." index="0"]
 
@@ -25,7 +26,7 @@ position = Vector2( 23.5591, -31.8979 )
 scale = Vector2( 0.4927, 0.616348 )
 z_index = 1
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="CoffeeToTakeArea" type="Area2D" parent="Coffee" index="0"]
 
