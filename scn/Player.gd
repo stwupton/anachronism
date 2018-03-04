@@ -4,6 +4,7 @@ signal coffee_collected
 
 onready var handsArea = $CoffeeStealer
 onready var hands = $CoffeeStealer/InteractionTrigger
+onready var sprite = $Sprite
 
 #Variables declared to make the game work... 
 #It just works... (tm)
@@ -28,6 +29,20 @@ func _physics_process(delta): #Gets checked every physics check
 	if Input.is_action_pressed("ui_down"):
 		movementVariable.y += 1
 	movementVariable = movementVariable.normalized()
+	
+	sprite.flip_h = false
+	if movementVariable.x < 0:
+		sprite.play('left')
+	elif movementVariable.x > 0:
+		sprite.play('left')
+		sprite.flip_h = true
+	elif movementVariable.y > 0:
+		sprite.play('down')
+	elif movementVariable.y < 0:
+		sprite.play('up')
+	else:
+		sprite.play('idle')
+	
 	move_and_slide(movementVariable * 500)
 
 func _on_area_entered(area):

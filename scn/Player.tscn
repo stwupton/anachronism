@@ -1,7 +1,37 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scn/Player.gd" type="Script" id=1]
-[ext_resource path="res://Asset/char.png" type="Texture" id=2]
+[ext_resource path="res://Asset/down_1.png" type="Texture" id=2]
+[ext_resource path="res://Asset/down_2.png" type="Texture" id=3]
+[ext_resource path="res://Asset/left_1.png" type="Texture" id=4]
+[ext_resource path="res://Asset/left_2.png" type="Texture" id=5]
+[ext_resource path="res://Asset/up_1.png" type="Texture" id=6]
+[ext_resource path="res://Asset/up_2.png" type="Texture" id=7]
+[ext_resource path="res://Asset/idle.png" type="Texture" id=8]
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -13,7 +43,7 @@ radius = 43.1379
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -22,10 +52,12 @@ collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
+[node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 
-scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 2 )
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 3 )
+animation = "idle"
+playing = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="CoffeeStealer" type="Area2D" parent="." index="1"]

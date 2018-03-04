@@ -33,7 +33,6 @@ _sections_unfolded = [ "Transform" ]
 [node name="Pedestrian" parent="PathFollow2D" index="0" instance=ExtResource( 2 )]
 
 _sections_unfolded = [ "Transform" ]
-has_coffee = false
 
 [node name="PathFollow2D2" type="PathFollow2D" parent="." index="1"]
 
@@ -50,7 +49,6 @@ _sections_unfolded = [ "Transform" ]
 [node name="Pedestrian" parent="PathFollow2D2" index="0" instance=ExtResource( 2 )]
 
 _sections_unfolded = [ "Transform" ]
-has_coffee = false
 
 [node name="PathFollow2D3" type="PathFollow2D" parent="." index="2"]
 
@@ -67,5 +65,6 @@ _sections_unfolded = [ "Transform" ]
 [node name="Pedestrian" parent="PathFollow2D3" index="0" instance=ExtResource( 2 )]
 
 _sections_unfolded = [ "Transform" ]
+has_coffee = true
 
 

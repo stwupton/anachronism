@@ -3,9 +3,9 @@ extends Node2D
 
 export(bool) var has_coffee = false setget _set_has_coffee
 
-onready var coffee_area = $Coffee/CoffeeToTakeArea #get_node('Coffee/Area2D')
-onready var coffee = $Coffee
+onready var coffee_area = $CoffeeToTakeArea #get_node('Coffee/Area2D')
 onready var animation_player = $AnimationPlayer
+onready var person = $Person
 
 func _ready():
 	_set_has_coffee(has_coffee)
@@ -13,14 +13,13 @@ func _ready():
 	
 func _on_area_entered(area):
 	if area.name == 'CoffeeStealer':
-		coffee.queue_free()
-		has_coffee = false
+		_set_has_coffee(false)
 		
 func _set_has_coffee(x):
 	has_coffee = x
 	
-	if coffee != null && coffee_area != null:
-		coffee.visible = has_coffee
+	if person != null && coffee_area != null:
+		person.play('coffee' if has_coffee else 'non_coffee')
 	
 		if has_coffee:
 			coffee_area.monitorable = true
