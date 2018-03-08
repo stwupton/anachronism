@@ -14,7 +14,7 @@ var movementVariable = Vector2(0,0)
 var coffeesCollected = 0
 
 func _ready(): #As soon as the object is put into the game... run this:
-	set_physics_process(true) #Look out for _physics_process(delta)
+	set_physics_process(true) #Look out for _physicss_process(delta)
 	print("This is the player brain - reading loud and clear..!")
 	handsArea.connect("area_entered", self, "_on_area_entered") #prepares to take coffees
 
@@ -44,13 +44,10 @@ func _physics_process(delta): #Gets checked every physics check
 	else:
 		sprite.play('idle')
 	
-	move_and_slide(movementVariable * 500)
+	move_and_slide(movementVariable * 600)
 
 func _on_area_entered(area):
-	if area.name == "CoffeeToTakeArea":
+	if area.name == "CoffeeToTakeArea" && area.get_parent().has_coffee:
+		area.get_parent().has_coffee = false
 		emit_signal("coffee_collected")
 		gui.increment_score()
-		
-#If (our character) touches (someone (who has a coffee))
-	#Remove the coffee from the person
-	#Add to a counter to show we have drank the coffee! 

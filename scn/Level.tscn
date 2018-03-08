@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scn/Level.gd" type="Script" id=1]
 [ext_resource path="res://scn/RoadMap.tscn" type="PackedScene" id=2]
@@ -48,17 +48,7 @@ outlines = [ PoolVector2Array( 40.0062, 33.179, 25.2012, 2533.36, 1507.39, 2535.
 custom_solver_bias = 0.0
 extents = Vector2( 38.9998, 287 )
 
-[sub_resource type="RectangleShape2D" id=9]
-
-custom_solver_bias = 0.0
-extents = Vector2( 45.8133, 257.296 )
-
-[sub_resource type="RectangleShape2D" id=10]
-
-custom_solver_bias = 0.0
-extents = Vector2( 34.3385, 241.951 )
-
-[node name="Level" type="Node2D"]
+[node name="Level" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 __meta__ = {
@@ -123,6 +113,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="Navigation2D" type="Navigation2D" parent="." index="2"]
 
 editor/display_folded = true
+visible = false
 _sections_unfolded = [ "Transform" ]
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
@@ -147,32 +138,177 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TempBuildings" index="0"]
 
+editor/display_folded = true
 position = Vector2( 509, 772 )
 shape = SubResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="TempBuildings/CollisionShape2D" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -39.0
+margin_top = -287.0
+margin_right = 38.0
+margin_bottom = 287.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.117176, 0.117189, 0.117176, 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="TempBuildings" index="1"]
 
-position = Vector2( 510.85, 1780.59 )
+editor/display_folded = true
+position = Vector2( 1279.25, 508.215 )
+rotation = 1.5708
 shape = SubResource( 8 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="TempBuildings/CollisionShape2D2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -39.0
+margin_top = -287.0
+margin_right = 38.0
+margin_bottom = 287.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.117176, 0.117189, 0.117176, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="TempBuildings" index="2"]
 
-position = Vector2( 1030.87, 1762.08 )
+editor/display_folded = true
+position = Vector2( 1019.48, 1792.96 )
 shape = SubResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="TempBuildings/CollisionShape2D3" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -39.0
+margin_top = -287.0
+margin_right = 38.0
+margin_bottom = 287.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.117176, 0.117189, 0.117176, 1 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="TempBuildings" index="3"]
 
-position = Vector2( 1267.37, 511.662 )
-rotation = 1.5708
-shape = SubResource( 9 )
-_sections_unfolded = [ "Transform" ]
+editor/display_folded = true
+position = Vector2( 508.699, 1795.53 )
+shape = SubResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="TempBuildings/CollisionShape2D4" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -39.0
+margin_top = -287.0
+margin_right = 38.0
+margin_bottom = 287.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.117176, 0.117189, 0.117176, 1 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="TempBuildings" index="4"]
 
-position = Vector2( 1272.49, 1033.82 )
+editor/display_folded = true
+position = Vector2( 1267.75, 1023.68 )
 rotation = 1.5708
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="TempBuildings/CollisionShape2D5" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -39.0
+margin_top = -287.0
+margin_right = 38.0
+margin_bottom = 287.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.117176, 0.117189, 0.117176, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="TempBuildings" index="5"]
+
+editor/display_folded = true
+position = Vector2( 1841.17, 1023.68 )
+rotation = 1.5708
+shape = SubResource( 8 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="TempBuildings/CollisionShape2D6" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -39.0
+margin_top = -287.0
+margin_right = 38.0
+margin_bottom = 287.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.117176, 0.117189, 0.117176, 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="DebugNavLine" parent="." index="5" instance=ExtResource( 4 )]
 
@@ -187,25 +323,12 @@ autoplay = true
 mix_target = 0
 bus = "Master"
 
-[node name="Pedestrians" parent="." index="7" instance=ExtResource( 6 )]
-
-[node name="Pedestrians2" parent="." index="8" instance=ExtResource( 6 )]
-
-position = Vector2( 505.48, 1026.07 )
-rotation = -1.5708
-pedestrian_rotation = 90.0
-
-[node name="Pedestrians3" parent="." index="9" instance=ExtResource( 6 )]
-
-position = Vector2( 516.84, 1003.35 )
-
-[node name="Pedestrians4" parent="." index="10" instance=ExtResource( 6 )]
-
-position = Vector2( 1.07983, 1016.98 )
-
-[node name="PoliceSpawns" type="Node2D" parent="." index="11"]
+[node name="PoliceSpawns" type="Node2D" parent="." index="7"]
 
 editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Spawn1" type="VisibilityNotifier2D" parent="PoliceSpawns" index="0"]
 
@@ -221,5 +344,28 @@ rect = Rect2( -10, -10, 20, 20 )
 
 position = Vector2( 1328.71, 2331.22 )
 rect = Rect2( -10, -10, 20, 20 )
+
+[node name="PedestriansList" type="Node2D" parent="." index="8"]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pedestrians" parent="PedestriansList" index="0" instance=ExtResource( 6 )]
+
+[node name="Pedestrians2" parent="PedestriansList" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 505.48, 1026.07 )
+rotation = -1.5708
+pedestrian_rotation = 90.0
+
+[node name="Pedestrians3" parent="PedestriansList" index="2" instance=ExtResource( 6 )]
+
+position = Vector2( 516.84, 1003.35 )
+
+[node name="Pedestrians4" parent="PedestriansList" index="3" instance=ExtResource( 6 )]
+
+position = Vector2( 1.07983, 1016.98 )
 
 

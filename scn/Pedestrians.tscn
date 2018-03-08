@@ -20,8 +20,8 @@ pedestrian_rotation = 0
 
 [node name="PathFollow2D" type="PathFollow2D" parent="." index="0"]
 
-position = Vector2( 407.663, 823.369 )
-offset = 111085.0
+position = Vector2( 611.608, 586.202 )
+offset = 1.28383e+06
 h_offset = 0.0
 v_offset = 0.0
 rotate = false
@@ -33,11 +33,12 @@ _sections_unfolded = [ "Transform" ]
 [node name="Pedestrian" parent="PathFollow2D" index="0" instance=ExtResource( 2 )]
 
 _sections_unfolded = [ "Transform" ]
+has_coffee = true
 
 [node name="PathFollow2D2" type="PathFollow2D" parent="." index="1"]
 
-position = Vector2( 614.9, 930.308 )
-offset = 111734.0
+position = Vector2( 406.799, 762.396 )
+offset = 1.28448e+06
 h_offset = 0.0
 v_offset = 0.0
 rotate = false
@@ -52,8 +53,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="PathFollow2D3" type="PathFollow2D" parent="." index="2"]
 
-position = Vector2( 496.738, 420.8 )
-offset = 112323.0
+position = Vector2( 608.314, 1051.38 )
+offset = 1.28507e+06
 h_offset = 0.0
 v_offset = 0.0
 rotate = false
@@ -65,6 +66,5 @@ _sections_unfolded = [ "Transform" ]
 [node name="Pedestrian" parent="PathFollow2D3" index="0" instance=ExtResource( 2 )]
 
 _sections_unfolded = [ "Transform" ]
-has_coffee = true
 
 

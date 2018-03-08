@@ -7,6 +7,7 @@ onready var player = $Player
 onready var camera = $Player/Camera2D
 onready var police_navigation = $Navigation2D
 onready var police_spawns = $PoliceSpawns
+onready var pedestrians_list = $PedestriansList
 
 var coffeesDrank = 0
 var police_on_the_scene = Array()
@@ -16,6 +17,14 @@ func _ready():
 	# Initialization here
 	player.connect("coffee_collected", self, "_score_up")
 	print("Established connection")
+	
+	for pedestrians in pedestrians_list.get_children():
+		pedestrians.connect('coffee_stolen', self, '_on_coffee_stolen')
+		
+func _on_coffee_stolen(pedestrians):
+	for p in pedestrians_list.get_children():
+		if p == pedestrians: continue
+		p.reset_coffee()
 
 func _score_up():
 	coffeesDrank = coffeesDrank + 1
